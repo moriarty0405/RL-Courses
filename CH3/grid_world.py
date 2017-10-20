@@ -52,8 +52,8 @@ for i in range(0, WORLD_SIZE):
 while True:
     # keep iteration until convergence
     newWorld = np.zeros((WORLD_SIZE, WORLD_SIZE))
-    for i, j in states:
-        for action in actions:
+    for i, j in states: # sum of all states
+        for action in actions: # sum of all actions
             # Next position for current position under current action
             newPosition = nextState[i][j][action]
             # bellman equation
